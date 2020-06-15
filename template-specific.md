@@ -1,5 +1,6 @@
 ### code
 
+```
 │ ├── resource/images/thumb-s.png
 │ ├── resource/images/thumb-m.png
 │ ├── resource/view/user/layouts/master.blade.php
@@ -32,21 +33,20 @@ Template
 
 Master.blade.php โครงส้างและตัวแปรเลเอาท์นอกสุดที่มี ID และ Class ที่ใช้ในฝั่ง edit mode และ view mode โดยใช้ Flex css ที่สร้างขึ้นมาเองเป็นหลัก
 
-````
+```
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Start SEO / Title -->
     <title>sample/master</title>
-    <meta name="keyword" content=“keyword 1, keyword2,...” />
-    <meta name="description" content=“description” />
+    <meta name="keyword" content="“keyword" 1, keyword2,...” />
+    <meta name="description" content="“description”" />
     <!-- End SEO / Title -->
 
     <!-- Start Favicon -->
@@ -69,64 +69,66 @@ Master.blade.php โครงส้างและตัวแปรเลเอ
     <!-- Start Theme/Custom Template Style -->
     {ThemeCSS}
     <!-- End Start Theme/Custom Template Style -->
+  </head>
 
-</head>
+  <body id="app-layout">
+    <div class="rv-container rv-container-center {{ $fullwidth }}">
+      <!-- Set Website Full width -->
+      <div class="bodyTemplate">
+        <div id="app">
+          <div class="rv-flex-wrapper">
+            <header id="selected_header">
+              {!! $header !!}
+            </header>
 
-<body id="app-layout">
-    <div class="rv-container rv-container-center {{ $fullwidth }}"><!-- Set Website Full width -->
-        <div class="bodyTemplate">
-            <div id="app">
-                <div class="rv-flex-wrapper">
-                    <header id="selected_header">
-                    {!! $header !!}
-                    </header>
+            <main class="main">
+              <div class="container">
+                <div id="selected_body">
+                  <div class="rv-container rv-container-center">
+                    <!-- Start Breadcrumbs -->
+                    {!! $Breadcrumbs !!}
+                    <!-- End Breadcrumbs -->
+                  </div>
+                  <div class="rv-container rv-container-center">
+                    <!-- Start aside1-->
+                    {!! $Sidebar Left !!}
+                    <!-- End aside1-->
 
-                    <main class="main">
-                        <div class="container">
-                            <div id="selected_body">
-                                <div class="rv-container rv-container-center">
-                                    <!-- Start Breadcrumbs -->
-                                    {!! $Breadcrumbs !!}
-                                    <!-- End Breadcrumbs -->
-                                </div>
-                                <div class="rv-container rv-container-center">
-                                    <!-- Start aside1-->
-                                    {!! $Sidebar Left !!}
-                                    <!-- End aside1-->
+                    {!! $Page !!}
 
-                                    {!! $Page !!}
+                    <!-- Start aside2-->
+                    {!! $Sidebar Right !!}
+                    <!-- End aside2-->
+                  </div>
+                </div>
+              </div>
+              <!-- End Container -->
+            </main>
 
-                                    <!-- Start aside2-->
-                                    {!! $Sidebar Right !!}
-                                    <!-- End aside2-->
-                                </div>
-                            </div>
-                        </div> <!-- End Container -->
-                    </main>
+            <footer id="selected_footer">
+              <div id="rvcmsfooter" class="editable_area">
+                <div class="mg">
+                  {!! $footer !!}
+                </div>
+              </div>
+            </footer>
 
-                    <footer id="selected_footer">
-                        <div id="rvcmsfooter" class="editable_area">
-                            <div class="mg">
-                                {!! $footer !!}
-                            </div>
-                        </div>
-                    </footer>
-
-                    <!-- Navigation Mobile Compatible view-->
-                    <div id="selected_navigator-mobile">
-                        {!! $MobileMenu !!}
-                    </div>
-                     <!-- End Navigation Mobile Compatible view-->
-
-                </div> <!-- End rv-flex-wrapper -->
-            </div> <!-- End app -->
-        </div> <!-- End bodyTemplate -->
-    </div> <!-- End rv-container rv-container-center -->
-
-</body>
+            <!-- Navigation Mobile Compatible view-->
+            <div id="selected_navigator-mobile">
+              {!! $MobileMenu !!}
+            </div>
+            <!-- End Navigation Mobile Compatible view-->
+          </div>
+          <!-- End rv-flex-wrapper -->
+        </div>
+        <!-- End app -->
+      </div>
+      <!-- End bodyTemplate -->
+    </div>
+    <!-- End rv-container rv-container-center -->
+  </body>
 </html>
-
-````
+```
 
 ## Head Tag
 
