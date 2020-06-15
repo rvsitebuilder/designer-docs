@@ -409,7 +409,9 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 </div>
 ```
 
-## Sidebar โครงสร้าง section และข้อมูล มาจาก lib หรือ template ## Footer
+โครงสร้าง section และข้อมูล มาจาก lib หรือ template
+
+## Footer
 
 เหมือนเดิม (เปลี่ยน css) ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน
 content >> Section 1.เก่า edit/save แล้วบนเว็บ 2.ใหม่
