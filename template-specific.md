@@ -492,6 +492,14 @@ bottom.blade.php
 </div>
 ```
 
+## Code Mobile Menu
+ เดิมวางไว้ล่างสุด การทำงานคงเดิมโดยพื้นหลังเมนูบาร์ตามดีไซต์แต่ submenu ใส่สีพื้นคงที่เป็นสีเทาดำ ตัวอักษรขาว
+
+```html
+  <div id="selected_navigator-mobile">
+      {!! $MobileMenu !!}
+  </div>
+```
 ## Section and Block
 
 - Code Section ตัวใหม่จะใช้ css grid ที่สร้างเอง โดยขึ้นต้นด้วย rv ใช้ขีดกลาง เช่น rv-container, rv-container-center
