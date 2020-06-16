@@ -41,8 +41,8 @@ Master.blade.php
 
     <!-- Start SEO / Title -->
     <title>sample/master</title>
-    <meta name="keyword" content="“keyword" 1, keyword2,...” />
-    <meta name="description" content="“description”" />
+    <meta name="keyword" content="keyword1, keyword2,...” />
+    <meta name="description" content="description" />
     <!-- End SEO / Title -->
 
     <!-- Start Favicon -->
@@ -87,13 +87,13 @@ Master.blade.php
                   </div>
                   <div class="rv-container rv-container-center"> 
                     <!-- Start aside1-->
-                    {!! $Sidebar Left !!}
+                    {!! $Left Sidebar !!}
                     <!-- End aside1-->
 
                     {!! $Page !!}
 
                     <!-- Start aside2-->
-                    {!! $Sidebar Right !!}
+                    {!! $Right Sidebar !!}
                     <!-- End aside2-->
                   </div>
                 </div>
@@ -196,7 +196,7 @@ header.blade.php
   <!-- ถ้าเมนู Overlap แบนเนอร์ ใส่คำว่า Overlap -->
 
   <section id="selected_topmenu">
-    <!-- ตัดเป็น topmenu.blade.php -->
+    <!-- ตัดเป็น top.blade.php -->
     <nav id="topmenu" class="topmenudesign">
       <div class="mg">
         <div class="uk-container uk-container-center rv-block-full">
@@ -283,8 +283,9 @@ header.blade.php
 ## Top menu
 
 Top menu `<section id="selected_topmenu"> ..</section>`
-Topmenu เหมือนเดิม แต่เปลี่ยน css
+Topmenu การทำงานเหมือนเดิม แต่ในดีไซต์เปลี่ยน css เป็นแบบใหม่ ตัวแปรยังคงเหมือนคือ [[LOGO]], [[TEL]], [[TOP_NAV]] มีเลเอาท์หลายดีไซต์
 เพิ่มเติม: ซ่อนแถบ topmenu ได้
+
 
 ## Navigation
 
@@ -337,7 +338,6 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 
 2. Image ( `<img src=””…> `) ล้วนๆขนาดตามสเกล image
 3. Slide (Component แบบไหน uikit, bootstrap, flexslide, carousel)
-
 - แบบ bg
 - แบบ tag image ตรงๆ
   ปล. เป็นระบบ banner slide Manager (ใส่รูปได้, ปรับตำแหน่ง text block และใส่ effect ได้) ???
@@ -367,9 +367,13 @@ Banner `<section id="selected_headerbanner"> ..</section>`
         <aside>
           <section>
             <div id="editable_area_content1" class="editable_area designBlock">
-              {!! \$Navigation!!} 
-              {!! \$sidebarLeft !!}
+              {!! $Navigation!!} 
+              <!--sidebar-right.blade.php -->
+              
+              {!! $sidebarLeft !!}
               <!-- (lib/Tempalte/Template.php มีโค้ด uikit อยู่) -->
+              
+              เรียกไฟล์ section.blade.php  อื่นๆที่มากับ template ได้
             </div>
           </section>
         </aside>
@@ -381,15 +385,17 @@ Banner `<section id="selected_headerbanner"> ..</section>`
     <div class="main design-block sidebar-center" rv-layout="100">
       <div class="layoutfix">
         <div id="editable_area_content" class="editable_area designBlock">
-          {!! \$bradecrum!!}
+          {!! $breadcrumbs!!}
+
           @include('includes.partials.messages')
           @if($slug->isSystem() || $slug->isPost() || $slug->isCategory() ||
           $slug->isNonEditble() || \$slug->isPage()) @yield('content') @endif
+
+          เรียกไฟล์ blade Section อื่นๆที่มากับ template ได้
+
         </div>
       </div>
     </div>
-
-    <!-- Sidebar Right (/resources/views/user/layouts/layout2.blade.php) -->
 
     <div
       class="aside aside-2 design-block sidebar-right"
@@ -400,9 +406,13 @@ Banner `<section id="selected_headerbanner"> ..</section>`
         <aside>
           <section>
             <div id="editable_area_content2" class="editable_area designBlock">
-              {!! \$Navigation!!} 
-              {!! \$sidebarRight !!}
+              {!! $Navigation!!} 
+              <!--sidebar-right.blade.php -->
+
+              {!! $sidebarRight !!}
               <!-- (lib/Tempalte/Template.php) -->
+
+              เรียกไฟล์ blade Section อื่นๆที่มากับ template ได้
             </div>
           </section>
         </aside>
@@ -416,29 +426,23 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 
 ## Footer
 
-การทำงานเหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์โดยใส่ตัวแปรมาทั้งหมดแต่หากดีไซต์ไม่ต้องแสดงส่วนนั้นๆให้ใส่ uk-footer-displayShow/uk-footer-displayHide
-ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน content >> Section 
+การทำงานเหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์โดยใส่ตัวแปรมาทั้งหมด แต่หากดีไซต์ไม่ต้องแสดงส่วนนั้นๆให้ใส่ uk-footer-displayShow/uk-footer-displayHide 
 
 bottom.blade.php
 
 <!-- footer 1  -->
 ```html
-<div class="uk-container uk-container-center rv-block-full"
-	data-footer="1">
+<div class="uk-container uk-container-center rv-block-full" data-footer="1">
   <div class="rvsb_design_block">
 	<div id="footerTemplate">
-		<div
-			class="uk-container uk-container-center rvsb-bg-footer uk-footer-displayShow"
-			id="textinfoAndContactFooter">
+		<div class="uk-container uk-container-center rvsb-bg-footer uk-footer-displayShow" id="textinfoAndContactFooter">
 			<div class="uk-grid">
-				<div class="uk-width-medium-3-4 uk-margin-bottom uk-footer-displayShow"
-					id="textinfoFooter">
+				<div class="uk-width-medium-3-4 uk-margin-bottom uk-footer-displayShow" id="textinfoFooter">
 					<h3 id="titleInformation">[[TITLEINFO]]</h3>
 					<hr id="hrInformation" />
 					<div id="contentInformation" style="white-space: pre-wrap;">[[CONTENTINFO]]</div>
 				</div>
-				<div class="uk-width-medium-1-4 uk-footer-displayShow"
-					id="contactFooter">
+				<div class="uk-width-medium-1-4 uk-footer-displayShow" id="contactFooter">
 					<h3 id="titleContact">[[TITLECONTACT]]</h3>
 					<ul class="uk-list uk-list-space" id="contactListFooter">
 						<li id="liAddressFooter">
@@ -482,11 +486,8 @@ bottom.blade.php
 						<img class="imgsocial" srcs="[[CDN_URL]]/templates/rvs_library/100/images/thumbnails/widget-social.png" 
 						id="1623f30cde8252f1f2d4460d0c100015" width="200" height="22" border="0" data-appname="rvsitebuilder/core" widgetname="social"  setting_socialicon="block" setting_social_icon="1" setting_label="Follow us" setting_facebook_icon="1" setting_facebook_link="#" setting_twitter_icon="1" setting_twitter_link="#" setting_google_icon="1" setting_google_link="#" setting_instagram_icon="1" setting_instagram_link="#" setting_line_icon="1" setting_line_link="#" setting_global="1" setting_design="1" style="display: none;">
 					</div>
-
 				</div>
-				<div
-					class="uk-width-medium-1-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow"
-					id="poweredFooter">
+				<div class="uk-width-medium-1-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="poweredFooter">
 					<powered>[[POWERED]]</powered>
 				</div>
 			</div>
@@ -494,7 +495,8 @@ bottom.blade.php
 
 		<div class="uk-container uk-container-center rvsb-bg-footer">
 			<div class="uk-text-center uk-footer-displayShow" id="sitemapFooter">
-				[[SITEMAP]][[LOGIN]]</div>
+        [[SITEMAP]][[LOGIN]]
+      </div>
 		</div>
 
 		<div class="uk-container uk-container-center rvsb-bg-footer">
@@ -515,8 +517,9 @@ bottom.blade.php
 
 ## Section and Block
 
-Code Section ตัวใหม่จะใช้ css grid ที่สร้างเอง โดยขึ้นต้นด้วย rv ใช้ขีดกลาง เช่น rv-container, rv-container-center
-และมีชื่อคลาสที่บังคับใส่เพื่อให้ js เรียกใช้งานได้คงเดิม คือ mg, rv-block-full, rvsb_design_block, bgContent, rv-grid, contenteditable="true"
+- Code Section ตัวใหม่จะใช้ css grid ที่สร้างเอง โดยขึ้นต้นด้วย rv ใช้ขีดกลาง เช่น rv-container, rv-container-center
+- มีชื่อคลาสที่บังคับใส่เพื่อให้ js เรียกใช้งานได้คงเดิม คือ mg, rv-block-full, rvsb_design_block, bgContent, rv-grid, contenteditable="true"
+
 
 ```html
 <div class="mg">
