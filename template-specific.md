@@ -329,7 +329,7 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 3. Slide (Component แบบไหน uikit3, bootstrap, flexslide, carousel)
 - แบบ bg (สำหรับ uikit2 ใส่เป็น  `<img src=””…>` แต่จะถูก compile เป็นภาพื้นหลัง)
 - แบบ tag image ตรงๆ (สำหรับ uikit3 ใส่เป็น  `<img src=””…>` )
-  ปล. เป็นระบบ banner slide Manager (ใส่รูปได้, ปรับตำแหน่ง text block และใส่ effect ได้) ???
+- ปล. เป็นระบบ banner slide Manager (เพิ่ม/ลบรูปได้, ปรับตำแหน่ง text block และใส่ effect ได้) ???
 
 
 ## Layout (Left Sidebar / Page Content / Right Sidebar)
