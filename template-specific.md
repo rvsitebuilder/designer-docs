@@ -314,7 +314,7 @@ Submenu ใหม่ : หากมีโค้ดแตกต่างกัน
 
 ## Banner
 
-```
+
 Banner `<section id="selected_headerbanner"> ..</section>`
 - ขนาดภาพมีผลกับความสูงของสไลด์
 - จะกำหนดขนาดคงที่
@@ -322,16 +322,15 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 - บางรูปอาจจะมีข้อความในนั้น การย่อรูปจะเป็นอย่างไร
 
 1. Hero (bg)
-- แบบไม่มีข้อมูล tag content ใดๆบนแบนเนอร์ ในมือถือต้องมี tool setting : background-size: contain; เพื่อย่อตามสเกล
-- แบบที่มีข้อมูล <p>,<div> ที่มีข้อมูล ความสูง Banner จะตาม Content
+- แบบไม่มีข้อมูล tag content ใดๆบนแบนเนอร์ ในมือถือต้องมี tool setting : background-size: contain; เพื่อย่อตามจอ
+- แบบที่มีข้อมูล `<p>..</p>,<div>..</div>` ความสูง Banner จะตาม Content โดยภาพเป็นพื้นหลังขยายขนาดตามอัตโนมัติ(cover)
 
-2. Image ( `<img src=””…> `) ล้วนๆขนาดตามสเกล image
-3. Slide (Component แบบไหน uikit, bootstrap, flexslide, carousel)
-- แบบ bg
-- แบบ tag image ตรงๆ
+2. Image ( `<img src=””…> `) ล้วนๆขนาดตามสเกล image จริง
+3. Slide (Component แบบไหน uikit3, bootstrap, flexslide, carousel)
+- แบบ bg (สำหรับ uikit2 ใส่เป็น  `<img src=””…>` แต่จะถูก compile เป็นภาพื้นหลัง)
+- แบบ tag image ตรงๆ (สำหรับ uikit3 ใส่เป็น  `<img src=””…>` )
   ปล. เป็นระบบ banner slide Manager (ใส่รูปได้, ปรับตำแหน่ง text block และใส่ effect ได้) ???
 
-```
 
 ## Layout (Left Sidebar / Page Content / Right Sidebar)
 
