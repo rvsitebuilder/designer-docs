@@ -230,10 +230,7 @@ header.blade.php
     <!-- ตัดเป็น navigation.blade.php -->
     <div class="uk-container uk-container-center rv-block-full">
       <div id="rvnavigator">
-        <nav
-          class="uk-navbar"
-          data-uk-sticky="{top:-200, animation: 'uk-animation-slide-top '}"
-        >
+        <nav class="uk-navbar" data-uk-sticky="{top:-200, animation: 'uk-animation-slide-top '}">
           <div class="uk-container uk-container-center">
             <div class="uk-float-left">
               <div class="rv_logo uk-navbar-nav uk-hidden-small"></div>
@@ -243,11 +240,7 @@ header.blade.php
               <span class="js-right-nav">[[RIGHT_NAV]]</span>
             </div>
           </div>
-          <a
-            href="#offcanvas"
-            class="uk-navbar-toggle uk-visible-small"
-            data-uk-offcanvas=""
-          ></a>
+          <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
           <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
             <logo_mobile>[[LOGO_MOBILE]]</logo_mobile>
           </div>
@@ -262,11 +255,7 @@ header.blade.php
       <div class="mg">
         <div class="rv-container rv-container-center rv-block-full">
           <!-- เริ่มโค้ดสไลด์ -->
-          <div
-            id="rvs-uk-slide"
-            class="uk-slidenav-position"
-            data-uk-slideshow=""
-          >
+          <div id="rvs-uk-slide" class="uk-slidenav-position" data-uk-slideshow="">
             <ul class="uk-slideshow">
               [[BANNER]]
             </ul>
@@ -298,25 +287,25 @@ Navigation เหมือนเดิม แต่ถ้าอยู่ใน s
 แนวนอน
 
 <div>
-    <nav>
-        <ul>
-            <li><a><span><i class=”rv-icon”></i> Home</span><div class=”rv-badge”></div></a></li>
-            <li><a><span><i class=”rv-icon”></i> About</span><div class=”rv-badge”></div></a></li>
-            <li><a><span><i class=”rv-icon”></i> Event</span><div class=”rv-badge”></div></a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a><span><i class=”rv-icon”></i> Home</span><div class=”rv-badge”></div></a></li>
+      <li><a><span><i class=”rv-icon”></i> About</span><div class=”rv-badge”></div></a></li>
+      <li><a><span><i class=”rv-icon”></i> Event</span><div class=”rv-badge”></div></a></li>
+    </ul>
+  </nav>
 </div>
 
 แนวตั้ง
 
 <aside class=”nav-vertical”>
-    <nav>
-        <ul>
-            <li><a><span><i class=”rv-icon”></i> Home</span><div class=”rv-badge”></div></a></li>
-            <li><a><span><i class=”rv-icon”></i> About</span><div class=”rv-badge”></div></a></li>
-            <li><a><span><i class=”rv-icon”></i> Event</span><div class=”rv-badge”></div></a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a><span><i class=”rv-icon”></i> Home</span><div class=”rv-badge”></div></a></li>
+      <li><a><span><i class=”rv-icon”></i> About</span><div class=”rv-badge”></div></a></li>
+      <li><a><span><i class=”rv-icon”></i> Event</span><div class=”rv-badge”></div></a></li>
+    </ul>
+  </nav>
 </ aside>
 ```
 
@@ -357,12 +346,7 @@ Banner `<section id="selected_headerbanner"> ..</section>`
   <!-- Set Row Full width must use class of Design block -->
   <div class="rv-grid">
 
-
-    <div
-      class="aside aside-1 design-block sidebar-left"
-      rv-layout="25"
-      style="display:none;"
-    >
+    <div class="aside aside-1 design-block sidebar-left" rv-layout="25" style="display:none;">
       <div class="layoutfix">
         <aside>
           <section>
@@ -397,11 +381,7 @@ Banner `<section id="selected_headerbanner"> ..</section>`
       </div>
     </div>
 
-    <div
-      class="aside aside-2 design-block sidebar-right"
-      rv-layout="25"
-      style="display:block;"
-    >
+    <div class="aside aside-2 design-block sidebar-right" rv-layout="25" style="display:block;">
       <div class="layoutfix">
         <aside>
           <section>
@@ -434,84 +414,82 @@ bottom.blade.php
 ```html
 <div class="uk-container uk-container-center rv-block-full" data-footer="1">
   <div class="rvsb_design_block">
-	<div id="footerTemplate">
-		<div class="uk-container uk-container-center rvsb-bg-footer uk-footer-displayShow" id="textinfoAndContactFooter">
-			<div class="uk-grid">
-				<div class="uk-width-medium-3-4 uk-margin-bottom uk-footer-displayShow" id="textinfoFooter">
-					<h3 id="titleInformation">[[TITLEINFO]]</h3>
-					<hr id="hrInformation" />
-					<div id="contentInformation" style="white-space: pre-wrap;">[[CONTENTINFO]]</div>
-				</div>
-				<div class="uk-width-medium-1-4 uk-footer-displayShow" id="contactFooter">
-					<h3 id="titleContact">[[TITLECONTACT]]</h3>
-					<ul class="uk-list uk-list-space" id="contactListFooter">
-						<li id="liAddressFooter">
-							<div class="tableFrame">
-								<div class="tableCell">
-									<span class="uk-icon-justify uk-icon-map-marker"></span>
-								</div>
-								<div class="tableCell">
-									<span id="addressContactFooter">[[ADDRESS]]</span>
-								</div>
-							</div>
-						</li>
-						<li id="liPhoneFooter">
-							<div class="tableFrame">
-								<div class="tableCell">
-									<span id="phoneContactFooter"><tel>[[TEL]]</tel></span>
-								</div>
-							</div>
-						</li>
-						<li id="liEmailFooter">
-							<div class="tableFrame">
-								<div class="tableCell">
-									<span class="uk-icon-justify uk-icon-envelope-o"></span>
-								</div>
-								<div class="tableCell">
-									<span id="emailContactFooter"><email>[[EMAIL]]</email></span>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<div class="uk-clearfix"></div>
-				</div>
-			</div>
-		</div>
+   <div id="footerTemplate">
+     <div class="uk-container uk-container-center rvsb-bg-footer uk-footer-displayShow" id="textinfoAndContactFooter">
+      <div class="uk-grid">
+        <div class="uk-width-medium-3-4 uk-margin-bottom uk-footer-displayShow" id="textinfoFooter">
+          <h3 id="titleInformation">[[TITLEINFO]]</h3>
+          <hr id="hrInformation" />
+          <div id="contentInformation" style="white-space: pre-wrap;">[[CONTENTINFO]]</div>
+        </div>
+        <div class="uk-width-medium-1-4 uk-footer-displayShow" id="contactFooter">
+          <h3 id="titleContact">[[TITLECONTACT]]</h3>
+          <ul class="uk-list uk-list-space" id="contactListFooter">
+            <li id="liAddressFooter">
+              <div class="tableFrame">
+                <div class="tableCell">
+                  <span class="uk-icon-justify uk-icon-map-marker"></span>
+                </div>
+                <div class="tableCell">
+                  <span id="addressContactFooter">[[ADDRESS]]</span>
+                </div>
+              </div>
+            </li>
+            <li id="liPhoneFooter">
+              <div class="tableFrame">
+                <div class="tableCell">
+                  <span id="phoneContactFooter"><tel>[[TEL]]</tel></span>
+                </div>
+              </div>
+            </li>
+            <li id="liEmailFooter">
+              <div class="tableFrame">
+                <div class="tableCell">
+                  <span class="uk-icon-justify uk-icon-envelope-o"></span>
+                </div>
+                <div class="tableCell">
+                  <span id="emailContactFooter"><email>[[EMAIL]]</email></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="uk-clearfix"></div>
+        </div>
+      </div>
+    </div>
 
-		<div class="uk-container uk-container-center rvsb-bg-footer">
-			<div class="uk-grid" id="socailandcopyright">
-				<div class="uk-width-small-3-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="socialbutton" onclick="RVwys.widget.ovewEvent(this)" panel=".wys-rowFooterSocial" widget="rvsitebuilder/core">
-					<div class="rv-ribbon"></div>
-					<div class="socailFooter uk-text-left-small">
-						<img class="imgsocial" srcs="[[CDN_URL]]/templates/rvs_library/100/images/thumbnails/widget-social.png" 
-						id="1623f30cde8252f1f2d4460d0c100015" width="200" height="22" border="0" data-appname="rvsitebuilder/core" widgetname="social"  setting_socialicon="block" setting_social_icon="1" setting_label="Follow us" setting_facebook_icon="1" setting_facebook_link="#" setting_twitter_icon="1" setting_twitter_link="#" setting_google_icon="1" setting_google_link="#" setting_instagram_icon="1" setting_instagram_link="#" setting_line_icon="1" setting_line_link="#" setting_global="1" setting_design="1" style="display: none;">
-					</div>
-				</div>
-				<div class="uk-width-medium-1-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="poweredFooter">
-					<powered>[[POWERED]]</powered>
-				</div>
-			</div>
-		</div>
+    <div class="uk-container uk-container-center rvsb-bg-footer">
+      <div class="uk-grid" id="socailandcopyright">
+        <div class="uk-width-small-3-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="socialbutton" onclick="RVwys.widget.ovewEvent(this)" panel=".wys-rowFooterSocial" widget="rvsitebuilder/core">
+          <div class="rv-ribbon"></div>
+          <div class="socailFooter uk-text-left-small">
+            <img class="imgsocial" srcs="[[CDN_URL]]/templates/rvs_library/100/images/thumbnails/widget-social.png" id="1623f30cde8252f1f2d4460d0c100015" width="200" height="22" border="0" data-appname="rvsitebuilder/core" widgetname="social"  setting_socialicon="block" setting_social_icon="1" setting_label="Follow us" setting_facebook_icon="1" setting_facebook_link="#" setting_twitter_icon="1" setting_twitter_link="#" setting_google_icon="1" setting_google_link="#" setting_instagram_icon="1" setting_instagram_link="#" setting_line_icon="1" setting_line_link="#" setting_global="1" setting_design="1" style="display: none;">
+          </div>
+        </div>
+        <div class="uk-width-medium-1-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="poweredFooter">
+          <powered>[[POWERED]]</powered>
+       </div>
+      </div>
+    </div>
 
-		<div class="uk-container uk-container-center rvsb-bg-footer">
-			<div class="uk-text-center uk-footer-displayShow" id="sitemapFooter">
+    <div class="uk-container uk-container-center rvsb-bg-footer">
+      <div class="uk-text-center uk-footer-displayShow" id="sitemapFooter">
         [[SITEMAP]][[LOGIN]]
       </div>
-		</div>
+    </div>
 
-		<div class="uk-container uk-container-center rvsb-bg-footer">
-			<div class="uk-text-center" id="copyrightFooter">
-				<copyright>[[COPYRIGHT]]</copyright>
-			</div>
-		</div>
-		<div class="uk-clearfix"></div>
+    <div class="uk-container uk-container-center rvsb-bg-footer">
+      <div class="uk-text-center" id="copyrightFooter">
+        <copyright>[[COPYRIGHT]]</copyright>
+      </div>
+    </div>
+    <div class="uk-clearfix"></div>
 
-		<div id="getDetailNavigator" cmdalign="" cmdtextalign=""
-			cmdhiddennav="" cmdhiddensubmenu=""></div>
-		<div id="getContentWidth" cmdWidth=""></div>
-	</div>
+    <div id="getDetailNavigator" cmdalign="" cmdtextalign="" cmdhiddennav="" cmdhiddensubmenu=""></div>
+      <div id="getContentWidth" cmdWidth=""></div>
+    </div>
 	
-	</div>
+  </div>
 </div>
 ```
 
