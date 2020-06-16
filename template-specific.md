@@ -23,17 +23,13 @@
 
 ```
 
-###
-
-```
-
-Template
+## Template
 
 อย่าลืม แท็กต่างๆ ที่อยู่ภายใน `<head>…..</head>`
 
-Master.blade.php โครงส้างและตัวแปรเลเอาท์นอกสุดที่มี ID และ Class ที่ใช้ในฝั่ง edit mode และ view mode โดยใช้ Flex css ที่สร้างขึ้นมาเองเป็นหลัก
+โครงสร้าง Master ประกอยด้วยตัวแปรและเลเอาท์ครอบนอกสุดมี ID และ Class ที่ใช้ในฝั่ง edit mode และ view mode โดยใช้ Flex css ที่สร้างขึ้นมาเองเป็นหลัก
 
-```
+Master.blade.php
 
 ```html
 <!DOCTYPE html>
@@ -89,7 +85,7 @@ Master.blade.php โครงส้างและตัวแปรเลเอ
                     {!! $Breadcrumbs !!}
                     <!-- End Breadcrumbs -->
                   </div>
-                  <div class="rv-container rv-container-center">
+                  <div class="rv-container rv-container-center"> 
                     <!-- Start aside1-->
                     {!! $Sidebar Left !!}
                     <!-- End aside1-->
@@ -347,16 +343,19 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 
 ```
 
-## Body (Sidebar1 / Page Content / Sidebar2)
+## Layout (Left Sidebar / Page Content / Right Sidebar)
 
-    เหมือนเดิม  ส่วนพวก Grid Block  จะเปลี่ยน css  ส่วนคลาสที่ js เรียกใช้ใน Edit Mode  เดิมคือ  (layoutfix, editable_area_content1, editable_area designBlock)
+- เปลี่ยนคลาส Grid Block  จะต้องเปลี่ยน css  
+- ส่วนคลาสที่ js เรียกใช้ใน Edit Mode ยังคงเดิมคือ  (layoutfix, editable_area_content1, editable_area designBlock)
+  
+แบ่งเป็นไฟล์ layout1.blade.php, layout2.blade.php, layout3.blade.php, layout4.blade.php
 
 ```html
 <div class="rv-container rv-container-center rv-block-full">
   <!-- Set Sidebar delete rv-block-full -->
   <!-- Set Row Full width must use class of Design block -->
   <div class="rv-grid">
-    <!-- Sidebar Left (/resources/views/user/layouts/layout2.blade.php) -->
+
 
     <div
       class="aside aside-1 design-block sidebar-left"
@@ -413,8 +412,103 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 
 ## Footer
 
-เหมือนเดิม (เปลี่ยน css) ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน
+เหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์
+ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน
 content >> Section 1.เก่า edit/save แล้วบนเว็บ 2.ใหม่
+
+bottom.blade.php
+
+<!-- footer 1  -->
+```html
+<div class="uk-container uk-container-center rv-block-full"
+	data-footer="1">
+  <div class="rvsb_design_block">
+	<div id="footerTemplate">
+		<div
+			class="uk-container uk-container-center rvsb-bg-footer uk-footer-displayShow"
+			id="textinfoAndContactFooter">
+			<div class="uk-grid">
+				<div class="uk-width-medium-3-4 uk-margin-bottom uk-footer-displayShow"
+					id="textinfoFooter">
+					<h3 id="titleInformation">[[TITLEINFO]]</h3>
+					<hr id="hrInformation" />
+					<div id="contentInformation" style="white-space: pre-wrap;">[[CONTENTINFO]]</div>
+				</div>
+				<div class="uk-width-medium-1-4 uk-footer-displayShow"
+					id="contactFooter">
+					<h3 id="titleContact">[[TITLECONTACT]]</h3>
+					<ul class="uk-list uk-list-space" id="contactListFooter">
+						<li id="liAddressFooter">
+							<div class="tableFrame">
+								<div class="tableCell">
+									<span class="uk-icon-justify uk-icon-map-marker"></span>
+								</div>
+								<div class="tableCell">
+									<span id="addressContactFooter">[[ADDRESS]]</span>
+								</div>
+							</div>
+						</li>
+						<li id="liPhoneFooter">
+							<div class="tableFrame">
+								<div class="tableCell">
+									<span id="phoneContactFooter"><tel>[[TEL]]</tel></span>
+								</div>
+							</div>
+						</li>
+						<li id="liEmailFooter">
+							<div class="tableFrame">
+								<div class="tableCell">
+									<span class="uk-icon-justify uk-icon-envelope-o"></span>
+								</div>
+								<div class="tableCell">
+									<span id="emailContactFooter"><email>[[EMAIL]]</email></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="uk-clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="uk-container uk-container-center rvsb-bg-footer">
+			<div class="uk-grid" id="socailandcopyright">
+				<div class="uk-width-small-3-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow" id="socialbutton" onclick="RVwys.widget.ovewEvent(this)" panel=".wys-rowFooterSocial" widget="rvsitebuilder/core">
+					<div class="rv-ribbon"></div>
+					<div class="socailFooter uk-text-left-small">
+						<img class="imgsocial" srcs="[[CDN_URL]]/templates/rvs_library/100/images/thumbnails/widget-social.png" 
+						id="1623f30cde8252f1f2d4460d0c100015" width="200" height="22" border="0" data-appname="rvsitebuilder/core" widgetname="social"  setting_socialicon="block" setting_social_icon="1" setting_label="Follow us" setting_facebook_icon="1" setting_facebook_link="#" setting_twitter_icon="1" setting_twitter_link="#" setting_google_icon="1" setting_google_link="#" setting_instagram_icon="1" setting_instagram_link="#" setting_line_icon="1" setting_line_link="#" setting_global="1" setting_design="1" style="display: none;">
+					</div>
+
+				</div>
+				<div
+					class="uk-width-medium-1-4 uk-margin-bottom uk-text-left-small uk-footer-displayShow"
+					id="poweredFooter">
+					<powered>[[POWERED]]</powered>
+				</div>
+			</div>
+		</div>
+
+		<div class="uk-container uk-container-center rvsb-bg-footer">
+			<div class="uk-text-center uk-footer-displayShow" id="sitemapFooter">
+				[[SITEMAP]][[LOGIN]]</div>
+		</div>
+
+		<div class="uk-container uk-container-center rvsb-bg-footer">
+			<div class="uk-text-center" id="copyrightFooter">
+				<copyright>[[COPYRIGHT]]</copyright>
+			</div>
+		</div>
+		<div class="uk-clearfix"></div>
+
+		<div id="getDetailNavigator" cmdalign="" cmdtextalign=""
+			cmdhiddennav="" cmdhiddensubmenu=""></div>
+		<div id="getContentWidth" cmdWidth=""></div>
+	</div>
+	
+	</div>
+</div>
+```
 
 ## Section and Block
 
