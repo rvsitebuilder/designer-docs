@@ -172,6 +172,7 @@ Site Config , Favicon, css/js Component, css/js ของ RVsitebuilder, Theme/C
 แสดง โครงสร้าง Template ประกอบด้วย `<header>..</header>, <main>..</main>, <footer>..</footer>` มี id #selected_header, #selected_body, #selected_footer, #selected_navigator-mobile อยู่ในแต่ละแท็ก
 
 - โดย ID และ Class ที่ใช้ในฝั่ง edit mode เช่น #app-layout, .bodyTemplate, #app {{ $fullwidth }} ค่า config ที่ใช้ในโปรแกรมเดิม
+- ภายใน  `<main>..</main> ` เรียกไฟล์ blade เลเอาท์ของ sidebar เช่น layout1.blade.php, layout2.blade.php, layout3.blade.php, layout4.blade.php
 - ประกอบด้วย {!! $header !!}, {!! $Breadcrumbs !!}, {!! $Sidebar Left !!}, {!! $footer !!},.... จะแทนค่าโดยเรียกมาจากไฟล์ blade
 
 ## Header
@@ -366,8 +367,9 @@ Banner `<section id="selected_headerbanner"> ..</section>`
         <aside>
           <section>
             <div id="editable_area_content1" class="editable_area designBlock">
-              {!! \$Navigation!!} {!! \$sidebarLeft !!}
-              (lib/Tempalte/Template.php มีโค้ด uikit อยู่)
+              {!! \$Navigation!!} 
+              {!! \$sidebarLeft !!}
+              <!-- (lib/Tempalte/Template.php มีโค้ด uikit อยู่) -->
             </div>
           </section>
         </aside>
@@ -379,7 +381,8 @@ Banner `<section id="selected_headerbanner"> ..</section>`
     <div class="main design-block sidebar-center" rv-layout="100">
       <div class="layoutfix">
         <div id="editable_area_content" class="editable_area designBlock">
-          {!! \$bradecrum!!} @include('includes.partials.messages')
+          {!! \$bradecrum!!}
+          @include('includes.partials.messages')
           @if($slug->isSystem() || $slug->isPost() || $slug->isCategory() ||
           $slug->isNonEditble() || \$slug->isPage()) @yield('content') @endif
         </div>
@@ -397,8 +400,9 @@ Banner `<section id="selected_headerbanner"> ..</section>`
         <aside>
           <section>
             <div id="editable_area_content2" class="editable_area designBlock">
-              {!! \$Navigation!!} {!! \$sidebarRight !!}
-              (lib/Tempalte/Template.php)
+              {!! \$Navigation!!} 
+              {!! \$sidebarRight !!}
+              <!-- (lib/Tempalte/Template.php) -->
             </div>
           </section>
         </aside>
@@ -412,9 +416,8 @@ Banner `<section id="selected_headerbanner"> ..</section>`
 
 ## Footer
 
-เหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์
-ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน
-content >> Section 1.เก่า edit/save แล้วบนเว็บ 2.ใหม่
+การทำงานเหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์โดยใส่ตัวแปรมาทั้งหมดแต่หากดีไซต์ไม่ต้องแสดงส่วนนั้นๆให้ใส่ uk-footer-displayShow/uk-footer-displayHide
+ปล.Section CDN Service จะมี2 ชุด (uikit3) ที่แสดงบน content >> Section 
 
 bottom.blade.php
 
@@ -512,8 +515,8 @@ bottom.blade.php
 
 ## Section and Block
 
-Code Section ตัวใหม่ css grid จะขึ้นต้นด้วย rv ใช้ขีดกลาง เช่น rv-container, rv-container-center
-โดยมี css ชื่อคลาส บังคับ ที่ js เรียกใช้ คือ mg, rv-block-full, rvsb_design_block, bgContent, rv-grid, contenteditable="true"
+Code Section ตัวใหม่จะใช้ css grid ที่สร้างเอง โดยขึ้นต้นด้วย rv ใช้ขีดกลาง เช่น rv-container, rv-container-center
+และมีชื่อคลาสที่บังคับใส่เพื่อให้ js เรียกใช้งานได้คงเดิม คือ mg, rv-block-full, rvsb_design_block, bgContent, rv-grid, contenteditable="true"
 
 ```html
 <div class="mg">
