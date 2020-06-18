@@ -1,6 +1,6 @@
-### Template Specification Developer
+### Template Specification Base
 
-- พาธในโปรแกรม
+โครงสร้างสำหรับ Developer
 
 ## Structure
 
@@ -68,7 +68,7 @@ theme : 1
  - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
  - Type of file : .png
  - Image Size : ไม่เกิน 200kb
- - Dimensios : 400 x auto (size m)
+ - Dimensions : 400 x auto (size m)
 
 ## Template
 
@@ -226,93 +226,4 @@ Site Config , Favicon, css/js Component, css/js ของ RVsitebuilder, Theme/C
 
 เริ่มแท็ก `<body>…..</body>`
 ภายในแสดง โครงสร้าง Template ประกอบด้วย `<header>..</header>, <main>..</main>, <footer>..</footer>` มี id #selected-header, #selected-body, #selected-footer, #selected-navigator-mobile อยู่ในแต่ละแท็ก
-
-
-## Header
-
-การทำงาน เรียงสลับกันได้,กำหนด overlap, ซ่อน Banner ได้เหมือนเดิม
-
-header.blade.php
-
-```html
-<div class="selected_overlap {{ class-design }}">
-    top.blade.php
-    menu.blade.php (menus/main-left.blade.php), (menus/main-right.blade.php)
-    banner.blade.php
-</div>
-```
-@TODO: 
-- {{ class-design }} : คือจากแท็มเพลตดีไซต์แบบกำหนดเมนู Overlap กับแบนเนอร์ ต้องใส่คำว่า Overlap
-
-
-## Top menu
-
-Topmenu การทำงานเหมือนเดิม แต่ในดีไซต์เปลี่ยน css เป็นแบบใหม่ ตัวแปรยังคงเหมือนคือ [[LOGO]], [[TEL]], [[TOP_NAV]] มีเลเอาท์หลายดีไซต์
-เพิ่มเติม: ซ่อนแถบ topmenu ได้
-
-top.blade.php
-
-```html
-<section id="selected_topmenu">
-    <nav>
-        .....
-
-    </nav>
-  </section>
-```
-
-## Navigation
-การวางตำแหน่งจุดต่างๆ
-1. top
-2. menu
-3. left sidebar
-4. right sidebar
-5. bottom
-
-เช่น
-menu.blade.php
-
-```html
-
-  <section id="selected_navigator">
-    .....
-  </section>
-  
-```
-
-## Banner
-
-1. Hero Banner
-2. Hero Slide
-   
-banner.blade.php
-```html
-
-  <section id="selected_headerbanner">
-    .....
-  </section>
-
-```
-
-## Footer
-
-การทำงานเหมือนเดิม (เปลี่ยน css) โดยมีหลากหลายดีไซต์โดยใส่ตัวแปรมาทั้งหมด
-
-footer.blade.php
-```html
-  <div class="" data-footer="1">
-    .....
-  </div>
-
-```
-
-## Code Mobile Menu
-
-เดิมวางไว้ล่างสุด การทำงานคงเดิมโดยพื้นหลังเมนูบาร์ตามดีไซต์แต่ submenu ใส่สีพื้นคงที่เป็นสีเทาดำ ตัวอักษรขาว
-
-```html
-  <div id="selected_navigator-mobile">
-    {!! $mobileMenu !!}
-  </div>
-```
 
