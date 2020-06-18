@@ -32,19 +32,20 @@
 
 
 การตั้งชื่อ 
-- css: ที่ใช้ในส่วนดีไซต์จะใช้ขีดกลาง เช่น rv-name
-- js: ที่ js เรียกใช้ เช่น js-name
-- css แบ่งส่วนประกอบ template : จะใช้ขีดกลาง เช่น id="selected-header
+- css : ที่ใช้ในส่วนดีไซต์จะใช้ขีดกลาง(Kebab)  เช่น rv-name
+- js : ที่ js เรียกใช้ เช่น js-name
+- css แบ่งส่วนประกอบ : จะใช้ เช่น id="selected-header, id="selected-footer
 - การเขียน Template blade variables เช่น {!! $templateSiteTitle !!} 
 - editable_area คือ css กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้
-- js editmode: ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish
-               โดยเปลี่ยนเป็น ขีดกลาง Kebab เช่น js-xxxx-xxx
-- css editmode: ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
-                โดยเปลี่ยนเป็น ขีดกลาง Kebab เช่น xxxx-xxxx-xxx
-  
+- js editmode : ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish
+               โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น js-xxxx-xxx
+- css editmode : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
+                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น xxxx-xxxx-xxx
+- css editmode tool : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
+                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น app-xxxx-xxx
 ## Config
 
-template.js ภายในมีอะไรบ้าง
+template.json ภายในมีอะไรบ้าง
 
 ```text
 id : template_1
@@ -67,7 +68,7 @@ theme : 1
  - Thumbnail : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
  - Type of file : .png
  - Image Size : ไม่เกิน 200kb
- - Dimensios : 400 x auto
+ - Dimensios : 400 x auto (size m)
 
 ## Template
 
@@ -92,7 +93,7 @@ Master.blade.php
             <div id="app">
 
               <header id="selected-header">
-                {!! $header !!}
+                   {!! $header !!}
               </header>
 
               <main id="selected-body">
@@ -100,14 +101,14 @@ Master.blade.php
               </main>
 
               <footer id="selected-footer">
-                <div id="rvcmsfooter" class="editable_area">
+                <div class="editable_area">
                     {!! $footer !!}
                 </div>
               </footer>
 
               <!-- Navigation Mobile Compatible view-->
               <div id="selected-navigator-mobile">
-                {!! $mobileMenu !!}
+                   {!! $mobileMenu !!}
               </div>
               <!-- End Navigation Mobile Compatible view-->
 
@@ -124,7 +125,7 @@ Master.blade.php
 </html>
 ```
 @TODO: 
-- view-viewmode: ชื่อเดิม bodyTemplate ย้ายไว้ด้านบน <div class="bodyTemplate"> เนื่องจากใช้ใน editmode อย่างเดียว มีผลให้ fullwidth พัง js เรียกลำดับคลาส selector ย้อนขึ้น ต้องแก้ใหม่โดยใช้ data-editor และ js เรียกใช้งานหลายที่กับเลเอาท์ฝั่ง edit mode สำหรับ css ใช้กับเมนูกลุ่ม Responsive Mode 
+- app-viewmode: ชื่อเดิม bodyTemplate ย้ายไว้ด้านบน <div class="bodyTemplate"> เนื่องจากใช้ใน editmode อย่างเดียว มีผลให้ fullwidth พัง js เรียกลำดับคลาส selector ย้อนขึ้น ต้องแก้ใหม่โดยใช้ data-editor และ js เรียกใช้งานหลายที่กับเลเอาท์ฝั่ง edit mode สำหรับ css ใช้กับเมนูกลุ่ม Responsive Mode 
 - {!! $head !!} : ให้ใส่เป็น Variable สำหรับโปรแกรมโค้ดที่อื่น เพื่อรองรับการ Overwrite
 - {!! $javaScript !!} แทนค่าตำแหน่งที่วาง js css เพื่อรองรับการ Overwrite
 - {!! $Layout !!} : เรียกไฟล์ layout1.blade.php, layout2.blade.php, layout3.blade.php, layout4.blade.php
@@ -135,9 +136,10 @@ Master.blade.php
 - {{ $fullwidth }} ใช้ในการตั้งค่า fullwidth ทั้งเว็บไซต์ ที่เมนู Design >> Website
 - data-editor="editor" : ใช้งานกับ Editor WYS
 - data-css="uikit3" :  ใช้งานกับ css framework อะไร
+- #selected_body คือ มีเฉพาะ master มีผลตอนลากวาง(drag and drop) section 
 
 ## Layout (Left Sidebar / Page Content / Right Sidebar)
-ใช้โค้ด uikit3
+ใช้โค้ด uikit3 ภายในไฟล์นี้ กำหนดตำแหน่งเพื่อเรียกไฟล์อื่นๆ
 
 layout1.blade.php
 
@@ -235,12 +237,12 @@ header.blade.php
 ```html
 <div class="selected_overlap {{ class-design }}">
     top.blade.php
-    menu.blade.php
+    menu.blade.php (menus/main-left.blade.php), (menus/main-right.blade.php)
     banner.blade.php
 </div>
 ```
 @TODO: 
-- {{ class-design }} : คือจากแท็มเพลตดีไซต์ ถ้าเมนู Overlap กับแบนเนอร์ ใส่คำว่า Overlap
+- {{ class-design }} : คือจากแท็มเพลตดีไซต์แบบกำหนดเมนู Overlap กับแบนเนอร์ ต้องใส่คำว่า Overlap
 
 
 ## Top menu
