@@ -46,6 +46,7 @@
 
 template.js ภายในมีอะไรบ้าง
 
+```text
 id : template_1
 category_id : 1
 description : Template เกี่ยวกับอะไร
@@ -60,13 +61,13 @@ use_form : true
 banner : 1
 pages : Home, About
 theme : 1
- 
+ ```
 
  ## Image
- Thumbnail : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
- Type of file : .png
- Image Size : ไม่เกิน 200kb
- Dimensios : 400 x auto
+ - Thumbnail : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
+ - Type of file : .png
+ - Image Size : ไม่เกิน 200kb
+ - Dimensios : 400 x auto
 
 ## Template
 
