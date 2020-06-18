@@ -1,0 +1,15 @@
+- ## Getting started Customizing
+  - [Theme](theme.md)
+  - [Export/Import Template](export.md)
+- ## Template Specification 
+  - [Template Specification Base](template-specific.md)
+  - [Template App](template-app-specific.md)
+  - [Layout Blade](layout.md)
+  - [Header](header.md)
+  - [Top Menu](top.md)
+  - [Navigation](navigation.md)
+  - [Banner](banner.md)
+  - [Footer](footer.md)
+  - [Mobile Menu](mobile-menu.md)
+- ## Editor Mode
+  - [Section and Block](section-block.md)

@@ -106,11 +106,11 @@ Master.blade.php
                 </div>
               </footer>
 
-              <!-- Navigation Mobile Compatible view-->
+           
               <div id="selected-navigator-mobile">
                    {!! $mobileMenu !!}
               </div>
-              <!-- End Navigation Mobile Compatible view-->
+        
 
           </div> <!-- End app -->
         </div> <!-- End rv-wrapper -->
