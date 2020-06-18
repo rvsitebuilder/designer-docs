@@ -33,19 +33,19 @@
 
 การตั้งชื่อ 
 - css : ที่ใช้ในส่วนดีไซต์จะใช้ขีดกลาง(Kebab)  เช่น rv-name
-- js : ที่ js เรียกใช้ เช่น js-name
-- css แบ่งส่วนประกอบ : จะใช้ เช่น id="selected-header, id="selected-footer
+- js : ที่ js เรียกใช้ เช่น class="js-name" หรือใช้แบบ attribute `<a data-editor="value"> test</a>` 
+- ชื่อคลาส แบ่งส่วนประกอบ : จะใช้ เช่น id="selected-header", id="selected-footer"
 - การเขียน Template blade variables เช่น {!! $templateSiteTitle !!} 
-- editable_area คือ css กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้
+- editable_area คือ css กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้( เปลี่ยนเป็น editable-area)
 - js editmode : ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish
-               โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น js-xxxx-xxx
+               โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
 - css editmode : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
-                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น xxxx-xxxx-xxx
+                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
 - css editmode tool : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
-                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น app-xxxx-xxx
+                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
 ## Config
 
-template.json ภายในมีอะไรบ้าง
+template.json ภายในมีอะไรบ้าง(ถ้าโปรแกรมเมอร์ปรับ เพิ่ม ให้มาปรับตรงนี้ด้วย)
 
 ```text
 id : template_1

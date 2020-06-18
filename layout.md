@@ -1,6 +1,6 @@
 ## Layout (Left Sidebar / Page Content / Right Sidebar)
 
-เป็นโครงสร้างหน้าเว็บไซต์ประกอบด้วยเลเอาท์แบบต่างๆ
+เป็นโครงสร้างหน้าเว็บไซต์ประกอบด้วยเลเอาท์แบบต่างๆ ใช้ uikit3 
 แบ่งเป็นไฟล์ layout1.blade.php, layout2.blade.php, layout3.blade.php, layout4.blade.php
 
 
@@ -71,6 +71,7 @@ layout1.blade.php
 </div>
 ```
 @TODO: 
+- ต้องแก้เป็น uikit3
 - designBlock: js เรียกใช้หลายที่ ส่วนใหญ่ใช้ใน edit mode
 - layoutfix: js เรียกใช้หลายที่ ส่วนใหญ่ใช้ใน edit mode
 - เดิม id="editable_area_content" ใช้ทั้ง js และดีไซต์ใน edit mode

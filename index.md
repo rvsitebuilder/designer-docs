@@ -12,4 +12,4 @@
   - [Footer](footer.md)
   - [Mobile Menu](mobile-menu.md)
 - ## Editor Mode
-  - [Section and Block](section-block.md)
+  - [Section and Block](section.md)
