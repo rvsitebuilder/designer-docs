@@ -54,7 +54,7 @@ description : Template เกี่ยวกับอะไร
 version : 1.0
 header : 1
 footer : 1
-menu : 1
+menu : 1-main
 topmenu : 1
 use_sidebar : 1
 theme : 1
@@ -64,8 +64,8 @@ pages : Home, About
 theme : 1
  ```
 
- ## Image
- - Thumbnail : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
+ ## Image Thumbnail Preview
+ - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
  - Type of file : .png
  - Image Size : ไม่เกิน 200kb
  - Dimensios : 400 x auto (size m)
