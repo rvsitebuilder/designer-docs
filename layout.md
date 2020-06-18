@@ -40,6 +40,8 @@ layout1.blade.php
           
           {!! $breadcrumbs!!} 
 
+          {!! $userprofile !!} 
+
           {!! $contentSections!!}
 
 
@@ -72,9 +74,10 @@ layout1.blade.php
 - designBlock: js เรียกใช้หลายที่ ส่วนใหญ่ใช้ใน edit mode
 - layoutfix: js เรียกใช้หลายที่ ส่วนใหญ่ใช้ใน edit mode
 - เดิม id="editable_area_content" ใช้ทั้ง js และดีไซต์ใน edit mode
-- {!! $menuSidebarLeft!}  เรียกจาก menu/sidebar-left.blade.php
-- {!! $menuSidebarRight!}  เรียกจาก menu/sidebar-right.blade.php
-- {!! $Navigation!}  เรียกจาก menu/sidebar-left.blade.php
+- {!! $menuSidebarLeft!!} เรียกจาก menu/sidebar-left.blade.php
+- {!! $menuSidebarRight!!} เรียกจาก menu/sidebar-right.blade.php
+- {!! $breadcrumbs!!}   เรียกจาก user/partials/breadcrumbs.blade.php
+- {!! $userprofile !!} เรียกจาก user/partials/userprofile.blade.php
 - {!! $sidebarLeftTemplate !!} เรียกจาก (lib/Tempalte/Template.php)
 - {!! $sidebarRightTemplate !!} เรียกจาก (lib/Tempalte/Template.php)
 - {!! $contentSection!!}  เรียกจาก (protected/sections/1.blade.php)
