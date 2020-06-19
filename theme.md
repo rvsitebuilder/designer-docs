@@ -5,12 +5,12 @@
 
 ## Use variables
 
-กำหนดตัวแปร Value ในไฟล์ variables.scss
+กำหนดตัวแปร Value ในไฟล์ variables.scss ซึ่งเราจะกำหนดให้สัมพันธ์กับเครื่องมือในโปรแกรม
 
 ```html
 
-    $global-font-heading: Open Sans;
-    $global-font-family: Open Sans;
+    $primary-color: #4dabff;
+    $secondary-color: #cccccc;
 
     $global-text-size: 14px;
 
