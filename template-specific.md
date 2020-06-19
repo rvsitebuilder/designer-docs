@@ -37,9 +37,9 @@
 - ชื่อคลาส แบ่งส่วนประกอบเท็มเพลต : ยกตัวอย่าง เช่น id="selected-header", id="selected-footer"
 - การเขียน Template blade variables ยกตัวอย่าง เช่น {!! $templateSiteTitle !!} 
 - editable_area คือ css ที่ใช้เฉพาะ edit mode กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้ (เปลี่ยนเป็น editable-area)
-- js editmode : ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
-- css editmode : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
-- css editmode tool :  ชื่อคลาสที่ระบุใน html ที่สัมพันธ์กับเครื่องมือของโปรแกรมนอกเฟรมเท็มเพลต ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
+- js ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
+- ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
+- ชื่อคลาสที่ระบุใน html ที่สัมพันธ์กับเครื่องมือของโปรแกรมนอกเฟรมเท็มเพลต ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
   
 
 ## Config
