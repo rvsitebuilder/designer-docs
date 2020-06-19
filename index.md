@@ -27,7 +27,7 @@
           - Parent template
           - App template
           - Master template
-      - Protected template
+      - Protected blade view
   - Tools
       - SCSS (and PreCSS)
       - PostCSS, PostHTML,Webpack, PurgeCSS
