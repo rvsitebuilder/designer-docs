@@ -14,9 +14,10 @@
   
 - ## Architecture Concepts
   - Multi CSS framework
-      - Load only 1 normalize
       - Namespaced CSS
-      - Nesting CSS  
+      - Nesting CSS
+      - Declaration Orders  
+      - Load only 1 normalize      
   - Blade Component
   - JS Integration
   - Laravel Template view folder lookup
@@ -27,12 +28,19 @@
           - App template
           - Master template
       - Protected template
+  - Tools
+      - SCSS (and PreCSS)
+      - PostCSS, PostHTML,Webpack, PurgeCSS
   
 - ## Web Template
   - [Template Specification Base](template-specific.md) #FIXME: rename to 'Directory Structure'
   - [Template App](template-app-specific.md)
-  - [Layout Blade](layout.md) #FIXME: rename to 'Responsive Layout'
-  - [Theme](theme.md) #TODO: rename feature name on the app to 'Design > Site Theme'  
+  - [Theme](theme.md) #TODO: rename feature name on the app to 'Design > Site Theme'  , this section support both SCSS and CSS3 Variables
+  - [Layout Blade](layout.md) #FIXME: rename to 'Dynamic Sidebar' 
+      - Full Page (No Sidebar)
+      - Left only Sidebar
+      - Right only Sidebar
+      - Left and Right Sidebars          
   - Sections
       - [Header](header.md)
       - [Banner](banner.md)
@@ -46,10 +54,23 @@
       - Search
       - Breadcrumb
       - Datatable
-      - Form  
+      - Form
+      - Pagination
+  - Packages/Rvsitebuilder/Blog
+        - index
+        - category
+        - post        
 
 - ## WYSIWYG
-  - [Section and Block](section.md) #FIXME: rename to 'Layout Editor Binding'
+   - Site Editor Binding
+   - Layout Editor Binding
+      - [Section and Block](section.md)
+      - Contenteditable
+      - Control Layout Editor Options
+   - Element Editor Binding
+      - Images
+      - Widget
+      - Hyperlink
   
 - ## Email Template 
   - MJML CSS framework
