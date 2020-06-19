@@ -64,10 +64,10 @@ theme : 1
  ```
 
  ## Image Thumbnail Preview
- - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
+ - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต large-preview.png (ซึ่งใช้แสดงตัวอย่างใน step Template)
  - Type of file : .png
  - Image Size : ไม่เกิน 200kb
- - Dimensions : 400 x auto (size m)
+ - Dimensions : 400 x auto 
 
 
 ## Master Template

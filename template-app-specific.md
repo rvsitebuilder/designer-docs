@@ -16,6 +16,7 @@
 │   ├── resource/images
 │   │            └──template-thumb-m.png
 │   │            └──template-thumb-l.png
+│   │            └──large-preview.png
 │   ├── resource/view/user/layouts
 │   │                      └── master.blade.php
 │   │                      ├── layout1.blade.php
@@ -43,13 +44,6 @@
 │   │                      └── 2.blade.php
 │   ├── resource/view/user/alert.blade.php
 
-......... email layout template (ต้องออกแบบใหม่) .......
-│   ├── resource/view/admin/emailtemplate/index.blade.php
-│   ├── resource/view/admin/emailtemplate/content.blade.php
-
-......... email content template (ต้องออกแบบใหม่) .......
-│   ├── resource/view/admin/??????
-│   ├── resource/view/admin/??????
 
 ......... overwriting other apps ......
 │   ├── packages/rvsitebuilder/blog/resources/views/admin/create.blade.php
@@ -83,10 +77,10 @@ template.json ภายในมีอะไรบ้าง (ถ้าโปร�
  ```
 
  ## Image Thumbnail Preview
- - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต thumb-s.png, thumb-m.png 
+ - Name : ตั้งชื่อรูปตัวอย่างแท็มเพลต large-preview.png (ซึ่งใช้แสดงตัวอย่างใน step Template)
  - Type of file : .png
  - Image Size : ไม่เกิน 200kb
- - Dimensions : 400 x auto (size m)
+ - Dimensions : 400 x auto 
 
  ## Maximum Folder Template
   
