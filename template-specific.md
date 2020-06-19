@@ -38,7 +38,7 @@
 - การเขียน Template blade variables ยกตัวอย่าง เช่น {!! $templateSiteTitle !!} 
 - editable_area คือ css ที่ใช้เฉพาะ edit mode กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้ (เปลี่ยนเป็น editable-area)
 - ชื่อคลาสที่ js เรียกใช้งานหเฉพาะฝั่ง edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
-- ชื่อคลาสที่ระบุใน html ที่ใช้เฉพาะฝั่ง edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
+- ชื่อคลาสที่ระบุใน html ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
 - ชื่อคลาสที่ระบุใน html ที่สัมพันธ์กับเครื่องมือของโปรแกรมนอกเฟรมเท็มเพลต ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
   
 
@@ -69,7 +69,11 @@ theme : 1
  - Image Size : ไม่เกิน 200kb
  - Dimensions : 400 x auto 
 
-
+ ## Maximum Folder Template
+  
+- Export / Import โฟล์เดอร์เท็มเพลตรวมกันเป็นไฟล์สกุลใดๆ ไม่เกิน 2 MB ที่ประกอบด้วย Blade File, Thumbnail, Image, template.json, อื่นๆ
+- Export / Import โฟล์เดอร์เท็มเพลตเป็นไฟล์สกุล .tar, .tar.gz, .zip
+  
 ## Master Template
 
 โครงสร้าง Master ประกอยด้วยตัวแปรและเลเอาท์ครอบนอกสุดมี ID และ Class ที่ใช้ในฝั่ง edit mode และ view mode 
