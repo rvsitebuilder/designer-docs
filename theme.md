@@ -12,6 +12,9 @@
     $primary-color: #4dabff;
     $secondary-color: #cccccc;
 
+    $global-font-heading: 'Open Sans';
+    $global-font-family: 'Open Sans';
+
     $global-text-size: 14px;
 
     $global-heading-color: #4dabff;
