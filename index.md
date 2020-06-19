@@ -16,7 +16,7 @@
   - Multi CSS framework
       - Namespaced CSS
       - Nesting CSS
-      - Declaration Orders  
+      - Declaration Orders (ITCSS+BEM)
       - Load only 1 normalize      
   - Blade Component
   - JS Integration
@@ -28,9 +28,6 @@
           - App template
           - Master template
       - Protected blade view
-  - Tools
-      - SCSS (and PreCSS)
-      - PostCSS, PostHTML,Webpack, PurgeCSS
   
 - ## Web Template
   - [Template Specification Base](template-specific.md) #FIXME: rename to 'Directory Structure'
