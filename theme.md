@@ -19,10 +19,6 @@
     $global-link-color: #ffb36b;
     $global-hover-color: #f1ca66;
 
-```
-
-
-```html
 
     h1, h2, h3 {
       color:$global-heading-color;
