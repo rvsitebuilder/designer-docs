@@ -1,4 +1,4 @@
-## การระบุ Code เพื่ือแยก framework
+## การระบุ Code เพื่อแยก framework
 
 - data-editor="section" คือที่ใช้กับเครื่องมือ editor ส่วนของ Section ของโปรแกรมได้
 - data-css="uikit3" คือโค้ดที่ระบุเพื่อแยก framework เช่น uikit3, Bootstrap, Native 
