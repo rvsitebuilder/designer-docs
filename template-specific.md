@@ -32,20 +32,19 @@
 
 
 การตั้งชื่อ 
-- css : ที่ใช้ในส่วนดีไซต์จะใช้ขีดกลาง(Kebab)  เช่น rv-name
-- js : ที่ js เรียกใช้ เช่น class="js-name" หรือใช้แบบ attribute `<a data-editor="value"> test</a>` 
-- ชื่อคลาส แบ่งส่วนประกอบ : จะใช้ เช่น id="selected-header", id="selected-footer"
-- การเขียน Template blade variables เช่น {!! $templateSiteTitle !!} 
-- editable_area คือ css กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้( เปลี่ยนเป็น editable-area)
-- js editmode : ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish
-               โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
-- css editmode : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
-                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
-- css editmode tool : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish
-                โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
+- css : ชื่อคลาสที่ใช้ในส่วนดีไซต์จะใช้ขีดกลาง(Kebab)  เช่น rv-name
+- js :  ชื่อคลาสที่ระบุใน html เพื่อให้ js เรียกใช้งาน เช่น class="js-name" หรือใช้แบบ attribute `<a data-editor="value"> test</a>` 
+- ชื่อคลาส แบ่งส่วนประกอบเท็มเพลต : ยกตัวอย่าง เช่น id="selected-header", id="selected-footer"
+- การเขียน Template blade variables ยกตัวอย่าง เช่น {!! $templateSiteTitle !!} 
+- editable_area คือ css ที่ใช้เฉพาะ edit mode กำหนดพื้นที่จุดที่สามารถเปลี่ยนแปลงได้ (เปลี่ยนเป็น editable-area)
+- js editmode : ที่ใช้เฉพาะส่วน edit mode เช่น app-name, editable_area, layoutfix โดยจะไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="js-xxxx-xxx"
+- css editmode : ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="xxxx-xxxx-xxx"
+- css editmode tool :  ชื่อคลาสที่ระบุใน html ที่สัมพันธ์กับเครื่องมือของโปรแกรมนอกเฟรมเท็มเพลต ที่ใช้เฉพาะส่วน edit mode โดย css จะอยู่ในไฟล์ editor.css ไม่ถูก publish โดยเปลี่ยนเป็นขีดกลาง(Kebab) เช่น class="app-xxxx-xxx"
+  
+
 ## Config
 
-template.json ภายในมีอะไรบ้าง(ถ้าโปรแกรมเมอร์ปรับ เพิ่ม ให้มาปรับตรงนี้ด้วย)
+template.json ภายในมีอะไรบ้าง (ถ้าโปรแกรมเมอร์ปรับ เพิ่ม ให้มาปรับตรงนี้ด้วย)
 
 ```text
 id : template_1
@@ -70,10 +69,11 @@ theme : 1
  - Image Size : ไม่เกิน 200kb
  - Dimensions : 400 x auto (size m)
 
-## Template
+
+## Master Template
 
 โครงสร้าง Master ประกอยด้วยตัวแปรและเลเอาท์ครอบนอกสุดมี ID และ Class ที่ใช้ในฝั่ง edit mode และ view mode 
-ใช้โค้ด uikit3 
+ใช้โค้ดเริ่มต้นเป็น uikit3 
 
 Master.blade.php
 
