@@ -13,6 +13,7 @@
         │ ├── resource/view/user/layouts/layout2.blade.php
         │ ├── resource/view/user/layouts/layout3.blade.php
         │ ├── resource/view/user/layouts/layout4.blade.php
+        │ ├── resource/view/user/layouts/index.blade.php
         │ ├── resource/view/user/partials/breadcrumbs.blade.php
         │ ├── resource/view/user/partials/userprofile???.blade.php
         │ ├── resource/view/user/header??
@@ -26,7 +27,7 @@
         │ ├── resource/view/user/protected/sections/1.blade.php
         │ ├── resource/view/user/protected/sections/2.blade.php
         │ ├── resource/view/user/footer??
-
+        │ ├── resource/view/user/partials/customhead.blade.php
 ```
 ![DesignerDashboard](images/layout.jpg)
 
@@ -85,41 +86,44 @@ Master.blade.php
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
   <head>
-    {!! $head !!}  
+     {!! $head !!}
+      
+     @include('user.layouts.partials.head')
+     @include('user.layouts.partials.customhead')
+
   </head>
 
   <body id="app-layout">
     <div class="app-viewmode">
+      <div id="app">
 
-        <!-- เริ่ม Template Website สำหรับไฟล์ Template App Overwrite -->
+        <!-- เริ่ม Template Website สำหรับไฟล์ Template App Overwrite ตั้งชื่อ index.blade.php -->  
         <div data-editor="editor" data-css="uikit3">
           <div class="rv-wrapper {{ $fullwidth }}">
-            <div id="app">
 
-              <header id="selected-header">
-                   {!! $header !!}
-              </header>
+            <header id="selected-header">
+              {!! $header !!}
+            </header>
 
-              <main id="selected-body">
-                   {!! $layout !!}
-              </main>
+            <main id="selected-body">
+              {!! $layout !!}
+            </main>
 
-              <footer id="selected-footer">
-                <div class="editable_area">
-                    {!! $footer !!}
-                </div>
-              </footer>
-
-           
-              <div id="selected-navigator-mobile">
-                   {!! $mobileMenu !!}
+            <footer id="selected-footer">
+              <div class="editable_area">
+                {!! $footer !!}
               </div>
+            </footer>
+  
+            <div id="selected-navigator-mobile">
+                {!! $mobileMenu !!}
+            </div>
         
 
-          </div> <!-- End app -->
-        </div> <!-- End rv-wrapper -->
-      </div><!-- End data-editor -->
-      
+          </div> 
+        </div> 
+
+      </div>
     </div><!-- End view-mode -->
 
     {!! $javaScript !!}  
@@ -141,14 +145,73 @@ Master.blade.php
 - data-editor="editor" : ใช้งานกับ Editor WYS
 - data-css="uikit3" :  ใช้งานกับ css framework อะไร
 - #selected_body คือ มีเฉพาะ master มีผลตอนลากวาง(drag and drop) section 
-
+- rvcmsfooter คือ ใช้ใน plugin footer
+  
+- @include('user.layouts.partials.customhead') สร้างไฟล์ blade ใหม่เมื่อต้องการเรียก `<link />, <script>..</script>` ต่างๆ Overwrite ในแท็ก head ได้ 
+- index.blade.php เอาไปสร้างเป็นไฟล์ blade ซึ่งภายในมีแท็ก header, main, footer โดยไม่ให้ overwrite ไฟล์ master แต่ให้ overwrite ไฟล์ index แทน
 
 ## Head Tag
 
 แท็กต่างๆ ที่อยู่ภายใน `<head>…..</head>`
-Site Config , Favicon, css/js Component, css/js ของ RVsitebuilder, Theme/Custom
+Site Config , SEO, Favicon, css/js Component, css/js ของ RVsitebuilder, Theme/Custom 
+
+โดยสร้างไฟล์หลัก 2 ไฟล์ เพื่อแยกการเรียกใช้ไฟล์ย่อยๆ ดังนี้
+- ใช้เรียกไฟล์หลักเฉพาะโปรแกรมของเราเท่านั้นโดย (ไม่ให้ Overwrite) 
+  @include('user.layouts.partials.head') จะแยกย่อยไฟล์สำหรับโปรแกรมในแต่ละส่วน เช่น
+
+```
+  @include('user.layouts.partials.head.meta')
+  @include('user.layouts.partials.head.seo')
+  @include('user.layouts.partials.head.hreflang')
+  @include('user.layouts.partials.head.favicons')
+  <link rel="stylesheet" href="{{ mix('css/xxx.css') }}">
+  <script defer src="{{ mix('js/user.xxx.js') }}"></script>
+      
+```
+
+- @include('user.layouts.partials.customhead')
+
+ สร้างไฟล์ใหม่เพื่อให้ Designer สามารถเรียกลิ้งไฟล์ต่างๆเกี่ยวกับธีมแท็มเพลต (Overwrite ได้) 
 
 
+@TODO: แยกย่อยไฟล์สำหรับโปรแกรมในแต่ละส่วน เพื่อรองรับการ Overwrite
+
+## Index
+ 
+  ใน master.blade.php จะมีส่วนที่เรียกไฟล์ @include('user.layouts.index') เพื่อสามารถ Overwrite ให้มีความแตกต่างกัน เช่น
+  - สามารถใส่ดีไซต์ได้
+  - สลับตำแหน่งได้ 
+  - เพิ่มเติมแท็ก HTML ใหม่ๆ เช่น สร้าง section เพื่อวาง Feed , Visitor... 
+  - สามารถวางปุ่ม Offcanvas เพื่อเปิดส่วน Slide in / Slide out ในตำแหน่งใหม่ๆ เช่น ซ้าย,ขวา,บน,ล่าง ได้
+
+ index.blade.php
+
+```
+  <div data-editor="editor" data-css="uikit3">
+    <div class="rv-wrapper {{ $fullwidth }}">
+
+      <header id="selected-header">
+        {!! $header !!}
+      </header>
+
+      <main id="selected-body">
+        {!! $layout !!}
+      </main>
+
+      <footer id="selected-footer">
+        <div class="editable_area">
+          {!! $footer !!}
+        </div>
+      </footer>
+
+      <div id="selected-navigator-mobile">
+          {!! $mobileMenu !!}
+      </div>
+
+
+    </div> 
+  </div> 
+```
 ## Body Tag
 
 เริ่มแท็ก `<body>…..</body>`

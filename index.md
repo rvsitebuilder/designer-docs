@@ -8,7 +8,7 @@
   - Creating New Template
       - Designer App (generate UIKIT3 starter template, and bootstrap starter template, and etc.)
       - [Export/Import Template]   
-  - Template Information #FIXME: move template.json in template-app-specific here.
+  - [Template Information](template-information.md) #FIXME: move template.json in template-app-specific here.
   - Composer Vendor
   - Child Template
   
@@ -30,21 +30,21 @@
       - Protected blade view
   
 - ## Web Template
-  - [Template Specification Base](template-specific.md) #FIXME: rename to 'Directory Structure'
+  - [Directory Structure](template-specific.md) #FIXME: rename to 'Directory Structure'
   - [Template App](template-app-specific.md)
   - [Theme](theme.md) #TODO: rename feature name on the app to 'Design > Site Theme'  , this section support both SCSS and CSS3 Variables
-  - [Layout Blade](layout.md) #FIXME: rename to 'Dynamic Sidebar' 
+  - [Dynamic Sidebar](dynamic-sidebar.md) #FIXME: rename to 'Dynamic Sidebar' 
       - Full Page (No Sidebar)
       - Left only Sidebar
       - Right only Sidebar
-      - Left and Right Sidebars          
+      - Left and Right Sidebars       
   - Sections
       - [Header](header.md)
       - [Banner](banner.md)
       - [Footer](footer.md) 
   - Menu
       - [Top Menu](top.md)
-      - [Navigation](navigation.md) #FIXME: rename to 'Menu'  
+      - [Menu](Menu.md) #FIXME: rename to 'Menu'  
       - [Mobile Menu](mobile-menu.md) 
   - Partials
       - Login
@@ -62,8 +62,8 @@
    - Site Editor Binding
    - Layout Editor Binding
       - [Section and Block](section.md)
-      - Contenteditable
-      - Control Layout Editor Options
+      - [Contenteditable](contenteditable.md)
+      - [Control Layout Editor Options](control-layout-editor.md)
    - Element Editor Binding
       - Images
       - Widget

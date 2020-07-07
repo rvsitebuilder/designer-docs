@@ -1,5 +1,6 @@
 ## การระบุ Code เพื่อแยก framework
 
+นิยาม
 - data-editor="section" คือ โค้ดที่ระบุเพื่อให้ใช้กับเครื่องมือ editor ส่วนของ Section ในโปรแกรมได้
 - data-css="uikit3" คือ โค้ดที่ระบุเพื่อแยก framework เช่น uikit3, Bootstrap, Native 
   เช่น `<div class="mg" data-editor="section" data-css="uikit3">...</div>`
@@ -9,10 +10,23 @@
   
 ## Section 
 
+  คือ แท็ก html ที่แบ่งส่วนของข้อมูล โดยส่วนของ Section นั้นต้องระบุ Attribute เพื่อบ่งบอกว่าใช้ framework ใดและสามารถเรียกใช้เครื่องมือ Section Setting ของโปรแกรมได้
+  
+  เช่น `<div data-editor="section" data-css="framework name" >...</div>`
+
+## Block 
+
+  คือ แท็ก html ที่แบ่งส่วนของข้อมูลในแต่ละ block หรือ Column ที่อยู่ภายใน Section โดยต้องระบุ Attribute เพื่อสามารถเรียกใช้เครื่องมือ Block Setting ของโปรแกรมได้
+
+  เช่น `<div data-editor="block"> ...</div>`
+
+
+## Example 
+
 UIKIT3
 
 ```html
-  <div class="mg" data-editor="section" data-css="uikit3" >
+  <div data-editor="section" data-css="uikit3" >
 
       <div class="uk-grid">
         <div data-editor="block">  
