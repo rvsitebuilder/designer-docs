@@ -156,8 +156,7 @@ Master.blade.php
 Site Config , SEO, Favicon, css/js Component, css/js ของ RVsitebuilder, Theme/Custom 
 
 โดยสร้างไฟล์หลัก 2 ไฟล์ เพื่อแยกการเรียกใช้ไฟล์ย่อยๆ ดังนี้
-- ใช้เรียกไฟล์หลักเฉพาะโปรแกรมของเราเท่านั้นโดย (ไม่ให้ Overwrite) 
-  @include('user.layouts.partials.head') จะแยกย่อยไฟล์สำหรับโปรแกรมในแต่ละส่วน เช่น
+- @include('user.layouts.partials.head')  ใช้เรียกไฟล์หลักเฉพาะโปรแกรมของเราเท่านั้นโดยไม่ให้ Overwrite จะแยกย่อยไฟล์สำหรับโปรแกรมในแต่ละส่วน เช่น
 
 ```
   @include('user.layouts.partials.head.meta')
@@ -178,7 +177,7 @@ Site Config , SEO, Favicon, css/js Component, css/js ของ RVsitebuilder, Th
 
 ## Index
  
-  ใน master.blade.php จะมีส่วนที่เรียกไฟล์ @include('user.layouts.index') เพื่อสามารถ Overwrite ให้มีความแตกต่างกัน เช่น
+  ใน master.blade.php จะมีส่วนที่เรียกไฟล์ @include('user.layouts.index') เพื่อสามารถ Overwrite ให้มีความแตกต่างกันได้ เช่น
   - สามารถใส่ดีไซต์ได้
   - สลับตำแหน่งได้ 
   - เพิ่มเติมแท็ก HTML ใหม่ๆ เช่น สร้าง section เพื่อวาง Feed , Visitor... 
