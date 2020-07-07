@@ -44,7 +44,7 @@
       - [Footer](footer.md) 
   - Menu
       - [Top Menu](top.md)
-      - [Menu](Menu.md) #FIXME: rename to 'Menu'  
+      - [Menu](menu.md) #FIXME: rename to 'Menu'  
       - [Mobile Menu](mobile-menu.md) 
   - Partials
       - Login
