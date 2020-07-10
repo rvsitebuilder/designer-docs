@@ -72,8 +72,18 @@ template.json ภายในมีอะไรบ้าง (ถ้าโปร�
     theme : 1
     use_form : true
     banner : 1
-    pages : Home, About
+    pages : {
+		"Home": {
+                        "sections" :["1"], ["2"]
+		},
+		"About": {
+                        "sections" :["1"], ["2"]
+		}
+	}
+
     theme : 1
+    css-framework : uikit3
+
  ```
 
  ## Image Thumbnail Preview

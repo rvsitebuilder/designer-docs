@@ -60,8 +60,15 @@ use_sidebar : 1
 theme : 1
 use_form : true
 banner : 1
-pages : Home, About
-theme : 1
+    pages : {
+		"Home": {
+                        "sections" :["1"], ["2"]
+		},
+		"About": {
+                        "sections" :["1"], ["2"]
+		}
+	}
+
  ```
 
  ## Image Thumbnail Preview
